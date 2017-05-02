@@ -1,11 +1,9 @@
 import { ADD_SOUNDTRACK } from './constant';
 
-export const fetchDataSucceed = (data) => {
-  return {
-    type: ADD_SOUNDTRACK,
-    payload: data.tracks,
-  };
-};
+export const fetchDataSucceed = data => ({
+  type: ADD_SOUNDTRACK,
+  payload: data.tracks,
+});
 
 export const fetchData = () => {
   return (dispatch) => {
