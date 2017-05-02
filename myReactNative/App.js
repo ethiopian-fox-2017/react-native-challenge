@@ -5,7 +5,7 @@ import {
   View,
 } from 'react-native';
 
-import { TrackList } from './components';
+import { TrackList } from './src/components';
 
 const styles = StyleSheet.create({
   container: {
