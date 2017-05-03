@@ -32,11 +32,13 @@ const styles = StyleSheet.create({
 class App extends Component {
   render() {
     return (
+      <Provider store={store}>
         <Container>
           <MainHeader />
           <PictureTimeline />
           <MainFooter />
         </Container>
+      </Provider>
     );
   }
 }

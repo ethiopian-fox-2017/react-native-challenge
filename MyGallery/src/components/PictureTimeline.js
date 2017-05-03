@@ -5,8 +5,7 @@ import {
   View,
   ScrollView,
 } from 'react-native';
-
-
+import { connect } from 'react-redux';
 import {
   Container,
   Content,
@@ -20,8 +19,13 @@ import {
   Body
 } from 'native-base';
 
+import { fetchingUser } from '../actions'
 
 export class PictureTimeline extends React.Component {
+
+  componentDidMount(){
+    this.props.fetchingUser()
+  }
 
   render () {
     return (
@@ -68,4 +72,11 @@ export class PictureTimeline extends React.Component {
   }
 }
 
-export default PictureTimeline;
+const mapStateToProps = state => ({
+  users: state.users
+})
+
+const mapDispatchToProps = dispatch => ({
+  fetchingUser: () => dispatch(fetchingUser())
+})
+export default connect(mapStateToProps,mapDispatchToProps) (PictureTimeline);

@@ -1,4 +1,4 @@
-import FETCH_USER_DATA from '../actions/constant'
+import { FETCH_USER_DATA } from './constant'
 
 export const fetchingUserSucceed = (users) => {
   return {
@@ -8,9 +8,9 @@ export const fetchingUserSucceed = (users) => {
 }
 
 export const fetchingUser = () => {
-  return (dispatch) => [
-    fetch('http://localhost:3004/users/')
+  return (dispatch) => {
+    fetch('http://9c230a37.ngrok.io/users')
     .then(res => res.json())
     .then(users => dispatch(fetchingUserSucceed(users)))
-  ]
-}
+  };
+};
