@@ -12,28 +12,37 @@ import {
   Button
 } from 'react-native';
 
+import { StackNavigator } from 'react-navigation'
+
 import Header from './Header';
 import Content from './Content';
 import Footer from './Footer';
+import Profile from './Profile';
+import Swipper from './Swipper';
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      name: 'ZomatoApp'
-    }
-  }
-  render() {
-    return (
-      <View style={styles.container}>
+// class App extends Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {
+//       name: 'SpotifyApp'
+//     }
+//   }
+//   render() {
+//     return (
+//       <View style={styles.container}>
+//         <Header {...this.state}/>
+//         <Content />
+//         <Footer />
+//       </View>
+//     );
+//   }
+// }
 
-        <Header {...this.state}/>
-        <Content />
-        <Footer />
-      </View>
-    );
-  }
-}
+const App = StackNavigator({
+  Main: {screen: Content},
+  Profile: {screen: Profile},
+  Swipper: {screen: Swipper}
+})
 
 const styles = StyleSheet.create({
   container: {

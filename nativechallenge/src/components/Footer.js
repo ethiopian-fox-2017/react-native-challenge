@@ -11,11 +11,11 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '10%',
     backgroundColor: '#80CBC4',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-start',
     borderTopWidth: 1
   },
   footerContainer: {
-    flex: 1,
+    flex: 2,
     flexDirection: 'row',
     justifyContent: 'space-around',
   },

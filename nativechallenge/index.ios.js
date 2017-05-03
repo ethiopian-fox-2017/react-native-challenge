@@ -8,6 +8,7 @@ import store from './src/store';
 import App from './src/components/App.js'
 
 export default class nativechallenge extends Component {
+
   render () {
     return (
       <Provider store={store}>
@@ -15,6 +16,8 @@ export default class nativechallenge extends Component {
       </Provider>
     )
   }
+
 }
+
 
 AppRegistry.registerComponent('nativechallenge', () => nativechallenge)
