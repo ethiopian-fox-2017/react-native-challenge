@@ -11,7 +11,6 @@ import {
   Button
 } from 'react-native'
 
-
 class Jokes extends React.Component {
   constructor(props) {
     super(props)
@@ -81,7 +80,7 @@ const styles = {
   },
   scrollView: {
     backgroundColor: '#eeeeee',
-    height: '80%',
+    height: '70%',
   },
 }
 
