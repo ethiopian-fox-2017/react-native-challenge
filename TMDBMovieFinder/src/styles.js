@@ -13,44 +13,38 @@ export const styles = StyleSheet.create({
     margin: 10
   },
   toolbar: {
-    backgroundColor: '#60E83B',
+    backgroundColor: '#01d277',
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
     paddingLeft: '5%',
     paddingRight: '5%',
-    height: '15%',
+    height: '10%',
     width: '100%'
   },
   logoTMDB: {
-    height: 50,
-    width: 130
+    height: 130,
+    width: 150
   },
   textTitle: {
     color: '#073554',
-    fontSize: 25,
+    fontSize: 15,
     margin: 5
-  },
-  itemBox: {
-    backgroundColor: '#FFF',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 500,
-    padding: 5,
-    width: '100%'
   },
   aboutBox: {
     backgroundColor: '#FFF',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
     height: '100%',
     padding: 5,
     width: '100%'
   },
-  movieTitle : {
-    fontSize: 15,
-    paddingBottom: 20,
-    paddingTop: 20
+  aboutText: {
+    fontSize: 20,
+    width: '75%'
+  },
+  scoreMovie : {
+    color: 'rgba(10,200,150,0.8)'
   },
   loadingIcon: {
     alignItems: 'center',
