@@ -22,7 +22,7 @@ export default class Main extends React.Component {
     }
   }
 
-  static navOpt = {
+  static navigationOptions = {
     title: 'Main'
   }
 

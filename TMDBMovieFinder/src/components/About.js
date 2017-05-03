@@ -9,7 +9,7 @@ import { styles } from '../styles'
 
 export default class About extends React.Component {
 
-  static navOpt = () => ({
+  static navigationOptions = () => ({
     title: 'About'
   })
 
