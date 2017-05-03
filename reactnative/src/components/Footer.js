@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '10%',
     backgroundColor: '#80CBC4',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     borderTopWidth: 1
   },
   footerContainer: {
@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
   },
   btnFooter: {
     width: '20%',
+    backgroundColor: 'blue',
   }
 });
 
