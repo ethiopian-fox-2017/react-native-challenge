@@ -22,7 +22,8 @@ class ListPhoto extends Component {
             />
             <Body>
               <Text>{photo.user.fullname}</Text>
-              <Text note>{photo.camera}</Text>
+              <Icon active name="camera" />
+              <Text>{photo.camera}</Text>
             </Body>
           </Left>
         </CardItem>
@@ -36,6 +37,16 @@ class ListPhoto extends Component {
           <Text>
             {photo.description}
           </Text>
+        </CardItem>
+        <CardItem style={{justifyContent: 'space-around'}}>
+          <Button transparent>
+              <Icon active name="eye" />
+              <Text>{photo.times_viewed}</Text>
+          </Button>
+          <Button transparent>
+              <Icon active name="heart" />
+              <Text>{photo.votes_count}</Text>
+          </Button>
         </CardItem>
 
       </Card>

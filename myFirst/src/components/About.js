@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Image } from 'react-native';
+import { Image, Linking } from 'react-native';
+
 import { Container, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, H1 } from 'native-base';
 
 
@@ -9,6 +10,7 @@ class About extends Component {
 
   };
   render() {
+    const {goBack} = this.props.navigation;
     return(
       <Container style={{ padding: 20 }}>
 
@@ -35,9 +37,18 @@ class About extends Component {
                 Aplikasi ini dibuat dengan tujuan untuk bersenang-senang, bila ada kesamaan nama pada karakter atau tokoh, itu adalah sebuah ketidak sengajaan
               </Text>
             </CardItem>
+            <CardItem style={{justifyContent: 'space-around'}}>
+            <Button transparent onPress={() => {Linking.openURL('https://github.com/anthonyjuan')}}>
+              <Image
+              style={{width: 30, height: 30, borderRadius: 100}}
+              source={{uri:'http://www.techgirlz.org/wp-content/uploads/2016/12/github-logo.png'}}
+              />
+            </Button>
+
+            </CardItem>
           </Card>
         </Content>
-        <Button iconLeft light onPress={() => this.props.navigation.navigate('Home')}>
+        <Button iconLeft light onPress={() => goBack()}>
            <Icon name='arrow-back' />
            <Text>Back</Text>
          </Button>
