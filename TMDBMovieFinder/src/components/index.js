@@ -28,7 +28,7 @@ export default class Main extends React.Component {
       rowHasChanged: (r1,r2) => r1 !== r2
     })
 
-    axios.get(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${secret.TMDB_API}`)
+    axios.get(`https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2016-12-01&sort_by=popularity.desc&api_key=${secret.TMDB_API}`)
       .then(res => {
         this.setState({
           dataSource: ds.cloneWithRows(res.data.results)

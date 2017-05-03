@@ -42,6 +42,7 @@ export const styles = StyleSheet.create({
     width: '75%'
   },
   scoreMovie : {
+    fontSize: 17,
     color: 'rgba(10,200,150,0.8)'
   },
   loadingIcon: {

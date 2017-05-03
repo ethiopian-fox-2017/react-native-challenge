@@ -17,7 +17,7 @@ export default class About extends React.Component {
     return (
       <View style={styles.aboutBox}>
         <Image source={require('../img/tmdb1.png')} style={styles.logoTMDB} />
-        <Text style={styles.aboutText}>A simple Movie Finder App powered by The Movie Database API to get the latest movie</Text>
+        <Text style={styles.aboutText}>A simple Movie Finder App powered by The Movie Database API to get the latest most popular movie</Text>
         <View>
           <Link url={'https://github.com/andrasat'}/>
         </View>
