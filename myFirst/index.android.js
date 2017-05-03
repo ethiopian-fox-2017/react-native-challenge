@@ -9,45 +9,52 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableOpacity,
+  ScrollView,
 } from 'react-native';
+import { Provider } from 'react-redux';
+
+import store from './src/store/';
+import Button from './src/components/Button';
+import styles from './src/assets/index.js';
+import Header from './src/components/Header';
+import Content from './src/components/Content';
+
 
 export default class myFirst extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Nativesss babe!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
+      <Provider store={store}>
+        <View style={styles.container}>
+          <Header />
+          <ScrollView
+            ref={(scrollView) => { _scrollView = scrollView; }}
+            automaticallyAdjustContentInsets={false}
+            onScroll={() => { console.log('onScroll!'); }}
+            scrollEventThrottle={200}
+            style={styles.scrollView}>
+            <Content />
+          </ScrollView>
+
+          <View style={styles.buttonGroup}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => { _scrollView.scrollTo({y: 0}); }}>
+              <Text>Scroll to top</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => { _scrollView.scrollToEnd({animated: true}); }}>
+              <Text>Scroll to bottom</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Provider>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+
 
 AppRegistry.registerComponent('myFirst', () => myFirst);
