@@ -1,11 +1,11 @@
-import React from 'react'
+import { StackNavigator } from 'react-navigation'
 
 import Main from './components'
+import About from './components/About'
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <Main />
-    )
-  }
-}
+const App = StackNavigator({
+  Main: { screen: Main },
+  About: { screen: About }
+})
+
+export default App

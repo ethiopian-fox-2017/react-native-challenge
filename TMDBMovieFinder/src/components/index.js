@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   View,
   Text,
@@ -12,14 +13,17 @@ import Toolbar from './Toolbar'
 import { styles } from '../styles'
 import secret from '../../env'
 
-
 export default class Main extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       dataSource: [],
       imgUrl: 'https://image.tmdb.org/t/p/w185'
     }
+  }
+
+  static navOpt = {
+    title: 'Main'
   }
 
   getData() {
@@ -52,9 +56,10 @@ export default class Main extends React.Component {
 
   render() {
     const { dataSource } = this.state
+    const { navigate } = this.props.navigation
     return (
       <View style={styles.container}>
-        <Toolbar />
+        <Toolbar navigate={navigate} />
         { dataSource.length <= 0 ?
           <View>
             <ActivityIndicator
@@ -73,4 +78,8 @@ export default class Main extends React.Component {
       </View>
     )
   }
+}
+
+Main.propTypes = {
+  navigation: PropTypes.object.isRequired
 }
