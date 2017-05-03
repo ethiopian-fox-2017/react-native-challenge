@@ -9,9 +9,7 @@ const App = StackNavigator(
     About: { screen: About }
   },
   {
-    navigationOptions: {
-      headerTintColor: '#60E83B'
-    }
+    headerMode: 'none'
   }
 )
 

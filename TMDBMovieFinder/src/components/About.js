@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {
   View,
-  Text
+  Text,
+  Button
 } from 'react-native'
 
 import { styles } from '../styles'
@@ -15,8 +16,12 @@ export default class About extends React.Component {
 
   render () {
     return (
-      <View style={styles.itemBox}>
+      <View style={styles.aboutBox}>
         <Text>Welcome to About Page</Text>
+        <Button
+          title="Go Back"
+          onPress={() => this.props.navigation.navigate('Main')}
+        />
       </View>
     )
   }

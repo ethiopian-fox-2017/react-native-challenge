@@ -32,10 +32,25 @@ export const styles = StyleSheet.create({
     margin: 5
   },
   itemBox: {
-    backgroundColor: '#4DFB70',
+    backgroundColor: '#FFF',
+    justifyContent: 'center',
     alignItems: 'center',
+    height: 500,
     padding: 5,
     width: '100%'
+  },
+  aboutBox: {
+    backgroundColor: '#FFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+    padding: 5,
+    width: '100%'
+  },
+  movieTitle : {
+    fontSize: 15,
+    paddingBottom: 20,
+    paddingTop: 20
   },
   loadingIcon: {
     alignItems: 'center',

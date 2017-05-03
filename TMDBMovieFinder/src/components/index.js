@@ -18,7 +18,7 @@ export default class Main extends React.Component {
     super(props)
     this.state = {
       dataSource: [],
-      imgUrl: 'https://image.tmdb.org/t/p/w185'
+      imgUrl: 'https://image.tmdb.org/t/p/w342'
     }
   }
 
@@ -44,8 +44,8 @@ export default class Main extends React.Component {
     const { imgUrl } = this.state
     return (
       <View style={styles.itemBox}>
-        <Text>{data.title}</Text>
-        <Image source={{uri: imgUrl+data.poster_path}} style={{width: 185, height: 275}} />
+        <Text style={styles.movieTitle}>{data.title}</Text>
+        <Image source={{uri: imgUrl+data.poster_path}} style={{width: 250, height: 455}} />
       </View>
     )
   }
