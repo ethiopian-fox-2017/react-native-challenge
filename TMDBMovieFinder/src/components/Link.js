@@ -9,8 +9,12 @@ export default class Link extends React.Component {
     const { url } = this.props
     Linking.canOpenURL(url).then(supported => {
       supported ? Linking.openURL(url) : Alert.alert(
-        'Error opening Link',
-        'Seems there is something wrong with this...')
+        'Error',
+        'Something Wrong Happened...')
+    }).catch(() => {
+      Alert.alert(
+        'Error',
+        'Something wrong happened...')
     })
   }
 
