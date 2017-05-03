@@ -23,20 +23,13 @@ import Content from './src/components/Content';
 
 
 export default class myFirst extends Component {
+
   render() {
     return (
       <Provider store={store}>
         <View style={styles.container}>
           <Header />
-          <ScrollView
-            ref={(scrollView) => { _scrollView = scrollView; }}
-            automaticallyAdjustContentInsets={false}
-            onScroll={() => { console.log('onScroll!'); }}
-            scrollEventThrottle={200}
-            style={styles.scrollView}>
             <Content />
-          </ScrollView>
-
           <View style={styles.buttonGroup}>
             <TouchableOpacity
               style={styles.button}
