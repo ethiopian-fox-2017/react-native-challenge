@@ -33,6 +33,7 @@ export const styles = StyleSheet.create({
   },
   itemBox: {
     backgroundColor: '#4DFB70',
+    alignItems: 'center',
     padding: 5,
     width: '100%'
   },

@@ -3,7 +3,9 @@ import React from 'react'
 import {
   View,
   Text,
-  ActivityIndicator
+  ActivityIndicator,
+  ListView,
+  Image
 } from 'react-native'
 
 import Toolbar from './Toolbar'
@@ -15,18 +17,33 @@ export default class Main extends React.Component {
   constructor() {
     super()
     this.state = {
-      data: [],
+      dataSource: [],
       imgUrl: 'https://image.tmdb.org/t/p/w185'
     }
   }
 
   getData() {
+
+    const ds = new ListView.DataSource({
+      rowHasChanged: (r1,r2) => r1 !== r2
+    })
+
     axios.get(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${secret.TMDB_API}`)
       .then(res => {
         this.setState({
-          data: res.data.results
+          dataSource: ds.cloneWithRows(res.data.results)
         })
       })
+  }
+
+  renderItems(data) {
+    const { imgUrl } = this.state
+    return (
+      <View style={styles.itemBox}>
+        <Text>{data.title}</Text>
+        <Image source={{uri: imgUrl+data.poster_path}} style={{width: 185, height: 275}} />
+      </View>
+    )
   }
 
   componentDidMount() {
@@ -34,11 +51,11 @@ export default class Main extends React.Component {
   }
 
   render() {
-    const { data } = this.state
+    const { dataSource } = this.state
     return (
       <View style={styles.container}>
         <Toolbar />
-        { data.length <= 0 ?
+        { dataSource.length <= 0 ?
           <View>
             <ActivityIndicator
               animating={true}
@@ -47,11 +64,11 @@ export default class Main extends React.Component {
             <Text style={styles.headerText}>Fetching data...</Text>
           </View>
           :
-          data.map(each =>
-            <View style={styles.itemBox} key={ each.id }>
-              <Text style={styles.headerText}>{ each.title }</Text>
-            </View>
-          )
+          <ListView
+            dataSource={dataSource}
+            renderRow={(rowData) => this.renderItems(rowData)}
+            style={{width: '100%'}}
+          />
         }
       </View>
     )
