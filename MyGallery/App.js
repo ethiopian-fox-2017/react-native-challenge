@@ -4,9 +4,11 @@ import {
   Text,
   View,
 } from 'react-native';
-
+import { Provider } from 'react-redux';
 import { Container } from 'native-base';
-import { PictureTimeline, MainHeader, MainFooter } from './src/components'
+
+import store from './src/stores';
+import { PictureTimeline, MainHeader, MainFooter } from './src/components';
 
 const styles = StyleSheet.create({
   container: {
@@ -30,11 +32,11 @@ const styles = StyleSheet.create({
 class App extends Component {
   render() {
     return (
-      <Container>
-        <MainHeader />
-        <PictureTimeline />
-        <MainFooter />
-      </Container>
+        <Container>
+          <MainHeader />
+          <PictureTimeline />
+          <MainFooter />
+        </Container>
     );
   }
 }

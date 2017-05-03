@@ -2,13 +2,14 @@
   "users" : [
     {
       "id" : 1,
-      "name" : "Wahyou",
-      "pictures" : [
+      "name": "Wahyou",
+      "username": "WahyuHidayat",
+      "avatar": "https://unsplash.it/300/400/?random",
+      "pictures": [
         {
-          "src" : "https://unsplash.it/300/400/?random",
-          "description" : "Wait a minute. Wait a minute, Doc. Uhhh...
-          Are you telling me that you built a time machine... out of a DeLorean?!
-          Whoa. This is heavy.",
+          "id": 1,
+          "src": "https://unsplash.it/300/400/?random",
+          "description" : "Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy."
         }
       ]
     }

@@ -22,6 +22,7 @@ import {
 
 
 export class PictureTimeline extends React.Component {
+
   render () {
     return (
       <Container>
