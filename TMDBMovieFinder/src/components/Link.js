@@ -7,6 +7,13 @@ export default class Link extends React.Component {
 
   handleClick = () => {
     const { url } = this.props
+
+    if(url === '') {
+      return Alert.alert(
+        'Error',
+        'Something Wrong Happened...')
+    }
+
     Linking.canOpenURL(url).then(supported => {
       supported ? Linking.openURL(url) : Alert.alert(
         'Error',
@@ -14,7 +21,7 @@ export default class Link extends React.Component {
     }).catch(() => {
       Alert.alert(
         'Error',
-        'Something wrong happened...')
+        'Something Wrong Happened...')
     })
   }
 

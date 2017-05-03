@@ -19,7 +19,7 @@ export default class About extends React.Component {
         <Image source={require('../img/tmdb1.png')} style={styles.logoTMDB} />
         <Text style={styles.aboutText}>A simple Movie Finder App powered by The Movie Database API to get the latest movie</Text>
         <View>
-          <Link url={'www'}/>
+          <Link url={'https://github.com/andrasat'}/>
         </View>
         <Button
           title="Go Back"
