@@ -5,6 +5,7 @@ const styles = {
     padding: 10,
     margin: 10,
     borderRadius: 10,
+    backgroundColor: 'white',
   },
   container: {
     flex: 1,
@@ -33,26 +34,24 @@ const styles = {
     paddingLeft: 22
   },
   content: {
-    borderBottomWidth: 1,
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    flex:1,
-    padding: 10,
+    paddingBottom: 20
   },
   scrollView: {
     paddingTop: 10,
     width: '100%',
   },
   buttonGroup: {
+    position:'absolute',
+    bottom: 0,
+    right: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   contentFirst: {
     flexDirection: 'column',
     flex: 4,
-    margin: 10
+    margin: 10,
+
   }
 }
 

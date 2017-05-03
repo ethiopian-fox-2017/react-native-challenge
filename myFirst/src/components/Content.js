@@ -3,7 +3,8 @@ import {
   Text,
   View,
   ActivityIndicator,
-  ListView
+  ListView,
+  TouchableOpacity
 } from 'react-native';
 import { connect } from 'react-redux';
 import { getPhotos } from '../actions';
@@ -18,17 +19,42 @@ class Content extends Component {
       ds: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2}),
     }
   }
+
   componentDidMount() {
     this.props.getPhotos();
   }
 
+  scrollToTop() {
+    this.ref.ListView.scrollTo(0)
+  }
+
   render() {
     const { photos } = this.props;
+    
     return (
-      <ListView
-        dataSource={this.state.ds.cloneWithRows(this.props.photos)}
-        renderRow={(rowData) => <ListPhoto photo={rowData}/> }
-      />
+      <View>
+        { photos.length > 0 ?
+          <View>
+            <ListView
+              ref="ListView"
+              dataSource={this.state.ds.cloneWithRows(this.props.photos)}
+              renderRow={(rowData) => <ListPhoto photo={rowData}/> }
+            />
+            <View style={styles.buttonGroup}>
+
+            </View>
+          </View>
+
+          :
+          <ActivityIndicator
+            animating={this.state.animating}
+            style={[styles.centering, {height: 80}]}
+            size="large"
+          />
+        }
+
+      </View>
+
     )
   }
 }

@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-import {
-  Text,
-  View
-} from 'react-native';
+import { Container, Header, Title, Button, Left, Right, Body, Icon } from 'native-base';
 
 import styles from '../assets'
 
-class Header extends Component {
+class Headernih extends Component {
 
   render() {
     return (
-      <View style={styles.navbar}>
-        <Text style={styles.headerText}> Daily Inspiration </Text>
-      </View>
+      <Header>
+          <Body>
+              <Title>Daily Inspiration</Title>
+          </Body>
+          <Right>
+            <Title onPress={() => {this.props.navigation.navigate('About')} }>
+              About
+            </Title>
+          </Right>
+      </Header>
     );
   }
 }
 
-export default Header;
+export default Headernih;
