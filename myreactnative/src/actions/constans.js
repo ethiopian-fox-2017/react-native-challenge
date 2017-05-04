@@ -1,0 +1,5 @@
+export const FETCH_WEATHER = 'FETCH_WEATHER';
+export const ADD_WEATHER = 'ADD_WEATHER';
+export const DELETE_WEATHER = 'DELETE_WEATHER';
+export const SEARCH_CITY = 'SEARCH_CITY';
+export const EDIT_WEATHER = 'EDIT_WEATHER';
