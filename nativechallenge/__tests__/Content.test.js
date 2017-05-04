@@ -1,6 +1,8 @@
 import 'react-native';
 import React from 'react';
-import Index from '../index.ios.js';
+import Content from '../src/components/Content.js';
+import { Provider } from 'react-redux';
+import store from '../src/store';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
@@ -8,7 +10,9 @@ import { shallow } from 'enzyme';
 
 it('renders correctly', () => {
   const tree = shallow(
-    <Index />
+    <Provider store={store}>
+      <Content />
+    </Provider>
   );
   expect(tree).toMatchSnapshot()
 });
