@@ -3,8 +3,8 @@ import {
   View,
   Text,
   StyleSheet,
-  Button
 } from 'react-native'
+import { Container, Content, Button } from 'native-base';
 
 const styles = StyleSheet.create({
   footer: {
@@ -29,36 +29,40 @@ const Footer = () => {
   return (
     <View style = {styles.footer}>
 
-      <View style = {styles.footerContainer}>
-        <Button
-          onPress={() => {}}
-          title="Home"
-          color="#000"
-          accessibilityLabel="Learn more about this purple button"
-          style = {styles.btnFooter }
-        />
-        <Button
-          onPress={() => {}}
-          title="About"
-          color="#000"
-          accessibilityLabel="Learn more about this purple button"
-          style = {styles.btnFooter }
-        />
-        <Button
-          onPress={() => {}}
-          title="Chat"
-          color="#000"
-          accessibilityLabel="Learn more about this purple button"
-          style = {styles.btnFooter }
-        />
-        <Button
-          onPress={() => {}}
-          title="Profile"
-          color="#000"
-          accessibilityLabel="Learn more about this purple button"
-          style = {styles.btnFooter }
-        />
-      </View>
+        <Container style= {{ flex: 1, flexDirection: 'row', justifyContent: 'space-around' }}>
+          <Content>
+            <Button
+              info
+              onPress={() => {}}
+            >
+              <Text>Home</Text>
+            </Button>
+          </Content>
+          <Content>
+            <Button
+              info
+              onPress={() => {}}
+            >
+              <Text>About</Text>
+            </Button>
+          </Content>
+          <Content>
+            <Button
+              info
+              onPress={() => {}}
+            >
+              <Text>Chat</Text>
+            </Button>
+          </Content>
+          <Content>
+            <Button
+              info
+              onPress={() => {}}
+            >
+              <Text>Profile</Text>
+            </Button>
+          </Content>
+        </Container>
 
     </View>
   )

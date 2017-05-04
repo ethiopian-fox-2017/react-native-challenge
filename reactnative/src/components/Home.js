@@ -18,6 +18,20 @@ class Home extends Component {
       name: 'Coldplay Albums'
     }
   }
+  static navigationOptions = {
+    title: 'Welcome Home',
+    headerTitleStyle: {
+       color: 'black',
+       flex: 1,
+       alignSelf: 'center',
+       marginTop: 10
+    },
+    headerStyle: {
+      backgroundColor: '#dddddd',
+      flexDirection: 'row',
+      justifyContent: 'center',
+    }
+  };
   render() {
     return (
       <View style={styles.container}>

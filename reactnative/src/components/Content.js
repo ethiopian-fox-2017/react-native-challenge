@@ -8,7 +8,7 @@ import {
   View,
   Text,
   StyleSheet,
-  Image
+  Image,
 } from 'react-native';
 
 
@@ -25,17 +25,23 @@ class Content extends React.Component {
   render() {
     console.log('-----=====', this.props.datas);
     return (
-      <View style = {styles.content}>
+      <ScrollView>
 
-        { this.props.datas.map((data, index) => (
-          <View key={index}>
-            <Text style = {{ fontSize: 15}}>
-              { index+1 }. { data.name }
-            </Text>
-          </View>
-        )) }
+        <View style = {styles.content}>
+          { this.props.datas.map((data, index) => (
+            <View key={index}>
+              <Text style = {{ fontSize: 15, alignSelf: 'center' }}>
+                { index+1 }. { data.name }
+              </Text>
+              <Image
+                source={{ uri: data.images[0].url }}
+                style={{width: 400, height: 400}}
+              />
+            </View>
+          )) }
+        </View>
 
-      </View>
+      </ScrollView>
     )
   }
 }
@@ -43,7 +49,7 @@ class Content extends React.Component {
 const styles = StyleSheet.create({
   content: {
     width: '100%',
-    height: '80%',
+    height: '100%',
     backgroundColor: '#E3F2FD',
     justifyContent: 'center',
     alignItems: 'center'

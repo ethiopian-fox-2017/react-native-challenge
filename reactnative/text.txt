@@ -1,0 +1,7 @@
+// <TouchableHighlight style={styles.touch}
+//   onPress={() => navigate('Content')}
+//   style={styles.touchText}
+// >
+//   <Text>Go to contents</Text>
+// </TouchableHighlight>
+{ uri: "https://i.scdn.co/image/9c2c4a9ac9726bfd996ff96383178bbb5efc59ab" }

@@ -6,7 +6,7 @@ import {
   TouchableHighlight,
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import { Container, Content, Icon, Button   } from 'native-base';
+import { Container, Content, Icon, Button } from 'native-base';
 
 import Contents from './Content'
 
@@ -26,20 +26,16 @@ class Header extends React.Component {
         <Text style={{textAlign: 'center', marginTop: 10, color: '#4a474b', fontSize: 22}}>
           { this.props.nama }
         </Text>
-        <View style={styles.navbarChil}>
-          <Container>
-            <Content>
-              <Button
-                onPress={() => navigate('Content')}
-                iconLeft light
-              >
-                <Text>Go to Content</Text>
-                <Icon name='home' />
-              </Button>
-            </Content>
-          </Container>
-        </View>
-
+        <Container style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
+          <Content>
+            <Button
+              block success
+              onPress={() => navigate('Content')}
+            >
+              <Text>Go to contents</Text>
+            </Button>
+          </Content>
+        </Container>
       </View>
     )
   }
@@ -49,13 +45,19 @@ class Header extends React.Component {
 const styles = StyleSheet.create({
   navbar: {
     width: '100%',
-    height: '10%',
+    height: '1%',
     flex: 1,
-    alignItems: 'center',
+    justifyContent: 'flex-start',
     backgroundColor: '#b7efff',
   },
   navbarChil: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  touchText: {
+    flex: 1,
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
   }
