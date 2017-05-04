@@ -64,10 +64,10 @@ export default class Main extends React.Component {
 
   render() {
     const { dataSource } = this.state
-    const { navigate } = this.props.navigation
+    const { navigation } = this.props
     return (
       <Container>
-        <Toolbar navigate={navigate} />
+        <Toolbar navigation={navigation} />
         { dataSource.length <= 0 ?
           <Content>
             <ActivityIndicator

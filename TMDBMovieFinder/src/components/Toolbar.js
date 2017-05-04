@@ -10,11 +10,12 @@ import { styles } from '../styles'
 
 export default class Toolbar extends React.Component {
   render() {
+    const { navigation } = this.props
     return (
       <View style={styles.toolbar}>
         <Text style={styles.textTitle}>Movie Finder</Text>
         <TouchableHighlight
-          onPress={() => this.props.navigate('About', {name: 'About'})}
+          onPress={() => navigation.navigate('About', {name: 'About'})}
           underlayColor="rgba(255,255,255,0.5)"
         >
           <Text style={styles.textTitle}>About</Text>
@@ -25,5 +26,5 @@ export default class Toolbar extends React.Component {
 }
 
 Toolbar.propTypes = {
-  navigate: PropTypes.func.isRequired
+  navigation: PropTypes.object.isRequired
 }

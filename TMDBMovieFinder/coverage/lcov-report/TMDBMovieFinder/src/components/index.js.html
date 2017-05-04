@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for TMDBMovieFinder/src/components/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">TMDBMovieFinder/src/components</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.29% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>9/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>1/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.29% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>9/14</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import axios from 'axios'
+import React from 'react'
+import PropTypes from 'prop-types'
+import {
+  Text,
+  ActivityIndicator,
+  ListView,
+  Image
+} from 'react-native'
+import { Container, Content, Card, CardItem, Left, Body, H2 } from 'native-base'
+&nbsp;
+import Toolbar from './Toolbar'
+import { styles } from '../styles'
+import secret from '../../env'
+&nbsp;
+export default class Main extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      dataSource: [],
+      imgUrl: 'https://image.tmdb.org/t/p/w342'
+    }
+  }
+&nbsp;
+  getData() {
+&nbsp;
+    const ds = new ListView.DataSource({
+      rowHasChanged: <span class="fstat-no" title="function not covered" >(r</span>1,r2) =&gt; <span class="cstat-no" title="statement not covered" >r1 !== r2</span>
+    })
+&nbsp;
+    axios.get(`https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2016-12-01&amp;sort_by=popularity.desc&amp;api_key=${secret.TMDB_API}`)
+      .then(<span class="fstat-no" title="function not covered" >re</span>s =&gt; {
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+          dataSource: ds.cloneWithRows(res.data.results)
+        })
+      })
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  re</span>nderItems(data) {
+    const { imgUrl } = <span class="cstat-no" title="statement not covered" >this.state</span>
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;Card style={{flex:0}}&gt;
+        &lt;CardItem&gt;
+          &lt;Left&gt;
+            &lt;H2&gt;{data.title}&lt;/H2&gt;
+            &lt;Body&gt;
+              &lt;Text style={styles.scoreMovie}&gt;{data.vote_average}&lt;/Text&gt;
+            &lt;/Body&gt;
+          &lt;/Left&gt;
+        &lt;/CardItem&gt;
+        &lt;CardItem&gt;
+          &lt;Body style={{alignItems: 'center'}}&gt;
+            &lt;Image source={{uri: imgUrl+data.poster_path}} style={{width: '75%', height: 450}} /&gt;
+            &lt;Text style={{padding:10}}&gt;{data.overview}&lt;/Text&gt;
+          &lt;/Body&gt;
+        &lt;/CardItem&gt;
+      &lt;/Card&gt;
+    )
+  }
+&nbsp;
+  componentDidMount() {
+    this.getData()
+  }
+&nbsp;
+  render() {
+    const { dataSource } = this.state
+    const { navigation } = this.props
+    return (
+      &lt;Container&gt;
+        &lt;Toolbar navigation={navigation} /&gt;
+        { dataSource.length &lt;= 0 ?
+          &lt;Content&gt;
+            &lt;ActivityIndicator
+              animating={true}
+              style={styles.loadingIcon}
+              size="large" /&gt;
+            &lt;Text style={styles.headerText}&gt;Fetching data...&lt;/Text&gt;
+          &lt;/Content&gt;
+          :
+<span class="branch-1 cbranch-no" title="branch not covered" >          &lt;Content&gt;</span>
+            &lt;ListView
+              dataSource={dataSource}
+              renderRow={<span class="fstat-no" title="function not covered" >(r</span>owData) =&gt; <span class="cstat-no" title="statement not covered" >this.renderItems(rowData)}</span>
+              style={{width: '100%'}}
+            /&gt;
+          &lt;/Content&gt;
+        }
+      &lt;/Container&gt;
+    )
+  }
+}
+&nbsp;
+Main.propTypes = {
+  navigation: PropTypes.object.isRequired
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu May 04 2017 16:02:23 GMT+0700 (WIB)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
