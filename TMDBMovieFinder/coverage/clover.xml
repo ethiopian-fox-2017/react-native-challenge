@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1493888543609" clover="3.2.0">
-  <project timestamp="1493888543609" name="All files">
-    <metrics statements="34" coveredstatements="21" conditionals="6" coveredconditionals="1" methods="17" coveredmethods="8" elements="57" coveredelements="30" complexity="0" loc="34" ncloc="34" packages="4" files="8" classes="8">
+<coverage generated="1493889975234" clover="3.2.0">
+  <project timestamp="1493889975234" name="All files">
+    <metrics statements="30" coveredstatements="22" conditionals="2" coveredconditionals="1" methods="16" coveredmethods="8" elements="48" coveredelements="31" complexity="0" loc="30" ncloc="30" packages="4" files="8" classes="8">
       <package name="TMDBMovieFinder">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="env.js" path="/home/andras/Github/hack-wk10/react-native-challenge/TMDBMovieFinder/env.js">
@@ -28,7 +28,7 @@
         </file>
       </package>
       <package name="TMDBMovieFinder.src.components">
-        <metrics statements="30" coveredstatements="17" conditionals="6" coveredconditionals="1" methods="16" coveredmethods="7"/>
+        <metrics statements="26" coveredstatements="18" conditionals="2" coveredconditionals="1" methods="15" coveredmethods="7"/>
         <file name="About.js" path="/home/andras/Github/hack-wk10/react-native-challenge/TMDBMovieFinder/src/components/About.js">
           <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
           <line num="16" count="1" type="stmt"/>
@@ -37,15 +37,11 @@
           <line num="34" count="2" type="stmt"/>
         </file>
         <file name="Link.js" path="/home/andras/Github/hack-wk10/react-native-challenge/TMDBMovieFinder/src/components/Link.js">
-          <metrics statements="8" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="1"/>
-          <line num="8" count="0" type="stmt"/>
-          <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
+          <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
           <line num="11" count="0" type="stmt"/>
-          <line num="16" count="0" type="stmt"/>
-          <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="21" count="0" type="stmt"/>
-          <line num="28" count="2" type="stmt"/>
-          <line num="36" count="3" type="stmt"/>
+          <line num="21" count="3" type="stmt"/>
         </file>
         <file name="Toolbar.js" path="/home/andras/Github/hack-wk10/react-native-challenge/TMDBMovieFinder/src/components/Toolbar.js">
           <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
