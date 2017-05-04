@@ -28,44 +28,44 @@ export class PictureTimeline extends React.Component {
   }
 
   render () {
+    const { users } = this.props
     return (
       <Container>
         <Content>
-          <Card>
-            <CardItem>
-              <Left>
-                <Thumbnail source={{uri: 'https://unsplash.it/300/400/?random'}} />
-                <Body>
-                  <Text>Ini User</Text>
-                  <Text note>GeekyAnts</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem cardBody>
-              <Image
-                source={{uri: 'https://unsplash.it/300/400/?random'}}
-                style={{height: 300, width: 400}}
-              />
-            </CardItem>
-            <CardItem content>
-              <Text>
-                Wait a minute. Wait a minute, Doc. Uhhh...
-                Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.
-              </Text>
-            </CardItem>
-            <CardItem>
-              <Button transparent>
-                <Icon active name="thumbs-up" />
-                <Text>12 Likes</Text>
-              </Button>
-              <Button transparent>
-                <Icon active name="chatbubbles" />
-                <Text>4 Comments</Text>
-              </Button>
-              <Text> 11 h ago</Text>
-            </CardItem>
-          </Card>
+          { users.map((user, index) => (
+            <Card key={index}>
+              <CardItem>
+                <Left>
+                  <Thumbnail source={{uri: user.avatar}} />
+                  <Body>
+                    <Text>{user.name}</Text>
+                    <Text note>@{user.username}</Text>
+                  </Body>
+                </Left>
+              </CardItem>
+              <CardItem cardBody>
+                <Image
+                  source={{uri: user.pictures[0].src}}
+                  style={{height: 300, width: 400}}
+                />
+              </CardItem>
+              <CardItem content>
+                <Text>{user.pictures[0].description}</Text>
+              </CardItem>
+              <CardItem>
+                <Button transparent>
+                  <Icon active name="thumbs-up" />
+                  <Text>12 Likes</Text>
+                </Button>
+                <Button transparent>
+                  <Icon active name="chatbubbles" />
+                  <Text>4 Comments</Text>
+                </Button>
+                <Text> 11 h ago</Text>
+              </CardItem>
+            </Card>
+          ))}
+
         </Content>
       </Container>
     )

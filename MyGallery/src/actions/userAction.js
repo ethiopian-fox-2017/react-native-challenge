@@ -9,7 +9,7 @@ export const fetchingUserSucceed = (users) => {
 
 export const fetchingUser = () => {
   return (dispatch) => {
-    fetch('http://9c230a37.ngrok.io/users')
+    fetch('http://e609ac71.ngrok.io/users')
     .then(res => res.json())
     .then(users => dispatch(fetchingUserSucceed(users)))
   };

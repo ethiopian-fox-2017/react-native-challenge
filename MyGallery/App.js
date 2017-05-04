@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import { Container } from 'native-base';
 
 import store from './src/stores';
-import { PictureTimeline, MainHeader, MainFooter } from './src/components';
+import { PictureTimeline, MainHeader, MainFooter, Home } from './src/components';
 
 const styles = StyleSheet.create({
   container: {
@@ -34,9 +34,9 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Container>
-          <MainHeader />
+          <Home />
           <PictureTimeline />
-          <MainFooter />
+
         </Container>
       </Provider>
     );
@@ -44,3 +44,5 @@ class App extends Component {
 }
 
 export default App;
+// <MainHeader />
+// <MainFooter />
