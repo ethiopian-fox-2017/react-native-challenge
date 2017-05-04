@@ -1,13 +1,16 @@
 import 'react-native';
 import React from 'react';
-import myFirst from '../index.android.js';
+import Content from '../src/components/Content';
 import { shallow } from 'enzyme';
 // Note: test renderer must be required after react-native.
-
+import { Provider } from 'react-redux';
+import store from '../src/store/';
 
 test('renders correctly', () => {
   const tree = shallow(
-    <myFirst />
+    <Provider store={store}>
+      <Content />
+    </Provider>
   );
 
   expect(tree).toMatchSnapshot();

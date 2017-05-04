@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import {
-  Text,
   View,
   ActivityIndicator,
   ListView,
-  TouchableOpacity
 } from 'react-native';
 import { connect } from 'react-redux';
 import { getPhotos } from '../actions';
@@ -30,7 +28,7 @@ class Content extends Component {
 
   render() {
     const { photos } = this.props;
-    
+
     return (
       <View>
         { photos.length > 0 ?

@@ -10,7 +10,7 @@ class About extends Component {
 
   };
   render() {
-    const {goBack} = this.props.navigation;
+    const { navigation } = this.props;
     return(
       <Container style={{ padding: 20 }}>
 
@@ -38,7 +38,7 @@ class About extends Component {
               </Text>
             </CardItem>
             <CardItem style={{justifyContent: 'space-around'}}>
-            <Button transparent onPress={() => {Linking.openURL('https://github.com/anthonyjuan')}}>
+            <Button className="buttonGit" transparent onPress={() => {Linking.openURL('https://github.com/anthonyjuan')}}>
               <Image
               style={{width: 30, height: 30, borderRadius: 100}}
               source={{uri:'http://www.techgirlz.org/wp-content/uploads/2016/12/github-logo.png'}}
@@ -48,7 +48,7 @@ class About extends Component {
             </CardItem>
           </Card>
         </Content>
-        <Button iconLeft light onPress={() => goBack()}>
+        <Button iconLeft light onPress={() => navigation.goBack()}>
            <Icon name='arrow-back' />
            <Text>Back</Text>
          </Button>

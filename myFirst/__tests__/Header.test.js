@@ -1,13 +1,13 @@
 import 'react-native';
 import React from 'react';
-import myFirst from '../index.android.js';
 import { shallow } from 'enzyme';
+import Header from '../src/components/Header';
 // Note: test renderer must be required after react-native.
 
 
 test('renders correctly', () => {
   const tree = shallow(
-    <myFirst />
+      <Header />
   );
 
   expect(tree).toMatchSnapshot();

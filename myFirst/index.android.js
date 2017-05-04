@@ -4,23 +4,23 @@
  * @flow
  */
 
-import React, { Component } from 'react';
 import {
   AppRegistry,
 } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 
-import App from './src';
+import Home from './src/components/Home';
+import About from './src/components/About';
 
-
-
-export default class myFirst extends Component {
-
-  render() {
-    return (
-      <App />
-    );
+const myFirst = StackNavigator({
+    Home: {screen: Home},
+    About: {screen: About},
+  },{
+    headerMode: 'none',
   }
-}
+
+);
+
 
 
 

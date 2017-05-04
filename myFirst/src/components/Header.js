@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Header, Title, Button, Left, Right, Body, Icon } from 'native-base';
+import { Header, Title, Right, Body } from 'native-base';
 
-import styles from '../assets'
 
 class Headernih extends Component {
 

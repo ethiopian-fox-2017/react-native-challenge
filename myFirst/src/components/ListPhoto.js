@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import {
   Image,
 } from 'react-native';
-import { Container, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body } from 'native-base';
+import { Card, CardItem,Text, Button, Icon, Left, Body } from 'native-base';
 
-import styles from '../assets';
 
 class ListPhoto extends Component {
   constructor(props) {
