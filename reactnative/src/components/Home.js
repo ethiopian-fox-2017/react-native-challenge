@@ -19,7 +19,7 @@ class Home extends Component {
     }
   }
   static navigationOptions = {
-    title: 'Welcome Home',
+    title: 'Home',
     headerTitleStyle: {
        color: 'black',
        flex: 1,

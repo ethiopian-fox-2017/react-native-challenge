@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 import {
   StackNavigator,
 } from 'react-navigation';
 
-import Home from './Home'
+import Home from './Home';
 
 const App = StackNavigator({
   Home: { screen: Home },
 })
 
-export default App
+export default App;
