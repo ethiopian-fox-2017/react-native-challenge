@@ -20,6 +20,4 @@ const App = StackNavigator({
   Detail: {screen: DetailItem},
 });
 
-
-
 export default App;

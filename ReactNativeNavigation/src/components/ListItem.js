@@ -4,8 +4,12 @@ import {
   View,
   ScrollView,
   Text,
-  StatusBar
+  StatusBar,
+  RefreshControl
 } from 'react-native';
+import {
+  Spinner
+} from 'native-base';
 
 import Item from './Item';
 import { fetchPhoto } from '../actions';
@@ -14,6 +18,9 @@ class ListItem extends React.Component {
 
   constructor(props){
     super(props);
+    this.state = {
+      refreshing: false
+    }
   }
 
   static navigationOptions = { title: 'Hello Photographer', };
@@ -22,7 +29,18 @@ class ListItem extends React.Component {
     this.props.fetchPhoto();
   }
 
+  afterRefresh(){
+    this.setState({refreshing: false})
+    this.props.fetchPhoto();
+  }
+
+  _onRefresh(){
+    this.setState({refreshing: true});
+    this.afterRefresh();
+  }
+
   render() {
+    const { photos } = this.props;
     return (
       <View style={styles.container}>
 
@@ -32,11 +50,18 @@ class ListItem extends React.Component {
         <Text style={styles.welcome}>
           Photography
         </Text>
-        <ScrollView >
+        <ScrollView
+          refreshControl={
+            <RefreshControl
+              refreshing={this.state.refreshing}
+              onRefresh={this._onRefresh.bind(this)}
+              />
+          }
+        >
         <View style={styles.viewStyle}>
-      {this.props.photos.length === 0 && <Text>Loading...</Text>}
-
-        { this.props.photos.map(item => {
+      {photos.isFetching && <Spinner color='pink'/>}
+      <Text style={styles.errorStyle}>{photos.error}</Text>
+        { photos.data.map(item => {
           // console.log(item);
           return (
           <Item key={item.id} item={item}
@@ -46,6 +71,7 @@ class ListItem extends React.Component {
 
         })
         }
+
         </View>
         </ScrollView>
       </View>
@@ -73,6 +99,10 @@ const styles = {
   viewStyle: {
     flexDirection: 'row',
     flexWrap: 'wrap'
+  },
+  errorStyle: {
+    color: '#D8000C',
+    backgroundColor: '#FFBABA'
   }
 };
 

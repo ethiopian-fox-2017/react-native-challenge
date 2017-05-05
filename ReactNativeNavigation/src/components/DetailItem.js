@@ -4,6 +4,7 @@ import {
   Text,
   Image
 } from 'react-native';
+import { Card } from 'react-native-elements';
 
 const styles = {
   itemStyle: {
@@ -33,16 +34,20 @@ class DetailItem extends React.Component {
 
   render() {
     const { params } = this.props.navigation.state;
+    const title = params.item.id + ' | '+ params.item.name;
     return (
       <View style={styles.itemStyle}>
           <Image style={styles.imageStyle} source={{uri: params.item.image_url[1]}} />
 
-          <Text style={styles.detailStyle}>{params.item.id} | {params.item.name} </Text>
+        <Card
+          title={title}>
           <Text style={styles.detailStyle}> Camera : {params.item.camera ? params.item.camera : '-'} </Text>
           <Text style={styles.detailStyle}> Lens : {params.item.lens ? params.item.lens : '-'} </Text>
           <Text style={styles.detailStyle}> Photo By : {params.item.user.firstname} {params.item.user.lastname} </Text>
+        </Card>
 
       </View>
+
     )
   }
 }
