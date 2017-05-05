@@ -1,0 +1,3 @@
+rootProject.name = 'ReactNativeChallenge'
+
+include ':app'
