@@ -13,8 +13,8 @@ const deviceHeight = Dimensions.get('window').height;
 const styles = {
 
   imageStyle: {
-    width: deviceWidth * 0.327,
-    height: deviceWidth * 0.327,
+    width: deviceWidth * 0.333,
+    height: deviceWidth * 0.333,
     position: 'relative'
   }
 }

@@ -90,5 +90,11 @@
 		<string>Skia.ttf</string>
 		<string>Times New Roman.ttf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+<string>Camera is used for ReactNative App</string>
+
+<!-- Include this only if you are planning to use the camera roll -->
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Photo Library is used for ReactNative App</string>
 </dict>
 </plist>

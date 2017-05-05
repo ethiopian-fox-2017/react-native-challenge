@@ -8,10 +8,12 @@ import {
   RefreshControl
 } from 'react-native';
 import {
-  Spinner
+  Spinner,
+  Container
 } from 'native-base';
 
 import Item from './Item';
+import FooterMenu from './FooterMenu';
 import { fetchPhoto } from '../actions';
 
 class ListItem extends React.Component {
@@ -47,6 +49,7 @@ class ListItem extends React.Component {
       <StatusBar backgroundColor="#3F51B5"
         barStyle="light-content" />
 
+      <Container>
         <Text style={styles.welcome}>
           Photography
         </Text>
@@ -74,6 +77,9 @@ class ListItem extends React.Component {
 
         </View>
         </ScrollView>
+
+        <FooterMenu navigation = {this.props.navigation}/>
+      </Container>
       </View>
     )
   }
