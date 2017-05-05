@@ -26,12 +26,16 @@ const PhotoItem = (props) => {
 
 const styles = {
   content: {
-    margin: 1,
+    marginLeft: 1,
+    marginRight: 1,
+    marginLeft: 1,
+    marginBottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
     width: deviceWidth * 0.327,
     height: deviceWidth * 0.327,
     borderWidth: 1,
+    borderColor: 'white',
     position: 'relative'
   }
 }

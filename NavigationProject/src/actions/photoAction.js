@@ -8,7 +8,8 @@ export const fetchPhotoSuccess = (photos) => ({
 
 export const fetchPhoto = () => {
   return (dispatch) => {
-    axios.get('https://api.500px.com/v1/photos?feature=pop&page=1&image_size=600&consumer_key=0zqsxtvn1mA4DSgF6MUjmuAqHpSh1BUO3sYeKElF')
-    .then(res => dispatch(fetchPhotoSuccess(res.data.photos)));
+    fetch('https://api.500px.com/v1/photos?feature=pop&page=1&image_size=600&consumer_key=0zqsxtvn1mA4DSgF6MUjmuAqHpSh1BUO3sYeKElF')
+    .then(res => res.json())
+    .then(data => dispatch(fetchPhotoSuccess(data.photos)));
   }
 }

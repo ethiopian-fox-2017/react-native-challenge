@@ -8,7 +8,7 @@ import {
 
 import { Icon, Col, Grid } from 'native-base';
 
-class PhotoItem extends Component {
+class Detail extends Component {
   constructor(props){
     super(props)
   }
@@ -87,4 +87,4 @@ const styles = {
   }
 }
 
-export default PhotoItem
+export default Detail

@@ -8,7 +8,7 @@ import {
   Image
 } from 'react-native';
 
-import { Col, Grid } from 'native-base';
+import { Col, Grid, Spinner } from 'native-base';
 
 import PhotoItem from './PhotoItem'
 import { fetchPhoto } from '../actions'
@@ -53,7 +53,7 @@ class ListPhoto extends Component {
         <Text style={{marginLeft: 10, color:'black', marginBottom:4}}>A photography enthusiast</Text>
         <Text style={{marginLeft: 10, marginBottom: 20, fontSize:12}}>Followed by<Text style={{fontWeight:'bold', color:'black'}}> Anthony Juan, Andra Satria, + 10 more</Text></Text>
       </View>
-        {this.props.photos.length === 0 && <Text style={styles.loading}>LOADING</Text>}
+        {this.props.photos.length === 0 && <Spinner color='black' />}
         <View style={styles.grid}>
             {
               this.props.photos.map(photo => (
