@@ -16,8 +16,8 @@ const FooterMenu = (props) => {
           <Icon name="apps" />
           <Text>Apps</Text>
         </Button>
-        <Button vertical>
-          <Icon name="camera" onPress={() => navigate('CameraApp') }/>
+        <Button vertical onPress={() => navigate('CameraApp') }>
+          <Icon name="camera" />
           <Text>Camera</Text>
         </Button>
       </FooterTab>

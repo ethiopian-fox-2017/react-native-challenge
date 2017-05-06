@@ -63,7 +63,9 @@ class ListItem extends React.Component {
         >
         <View style={styles.viewStyle}>
       {photos.isFetching && <Spinner color='pink'/>}
-      <Text style={styles.errorStyle}>{photos.error}</Text>
+
+        <Text style={styles.errorStyle}>{photos.error}</Text>
+
         { photos.data.map(item => {
           // console.log(item);
           return (

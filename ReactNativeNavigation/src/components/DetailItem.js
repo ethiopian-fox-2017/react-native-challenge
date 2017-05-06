@@ -13,6 +13,8 @@ import {
 import { Card } from 'react-native-elements';
 import RNFetchBlob from 'react-native-fetch-blob';
 
+import MapPhoto from './MapPhoto';
+
 
 const deviceWidth = Dimensions.get('window').width;
 const deviceHeight = Dimensions.get('window').height;
@@ -29,7 +31,8 @@ const styles = {
   detailStyle: {
     fontWeight: 'bold',
     fontSize: 15,
-    color: '#66BB6A'
+    color: '#66BB6A',
+    alignSelf: 'center'
   },
   saveButton: {
     alignSelf: 'center',
@@ -41,6 +44,7 @@ const styles = {
     margin: 10,
   },
   cardStyle: {
+    justifyContent: 'center',
     alignItems: 'center'
   },
   fullWidth: {
@@ -91,12 +95,17 @@ class DetailItem extends React.Component {
 
   render() {
     const { params } = this.props.navigation.state;
-    const title = params.item.id + ' | '+ params.item.name;
+    const title = params.item.id + " | "+ params.item.name;
+    let haveMap = false;
+    if(params.item.latitude && params.item.longitude){
+      haveMap = true;
+    }
     return (
       <View style={styles.itemStyle}>
+      <ScrollView style={styles.fullWidth}>
           <Image style={styles.imageStyle} source={{uri: params.item.image_url[1]}} />
 
-        <ScrollView style={styles.fullWidth}>
+
         <Card style={styles.cardStyle}
           title={title}>
           <Text style={styles.detailStyle}> Camera : {params.item.camera ? params.item.camera : '-'} </Text>
@@ -105,7 +114,15 @@ class DetailItem extends React.Component {
           <TouchableHighlight onPress={()=>this.saveToCameraRoll()}>
             <Text style={styles.saveButton}>Save</Text>
           </TouchableHighlight>
+
+          { haveMap &&
+            <View>
+              <Text style={styles.detailStyle}>Photo's taken place</Text>
+              <MapPhoto photo={params.item} />
+            </View>
+          }
         </Card>
+
         </ScrollView>
       </View>
 
