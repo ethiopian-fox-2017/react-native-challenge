@@ -10,23 +10,33 @@ import {
   Dimensions,
   Alert
 } from 'react-native';
+import {
+  Container,
+} from 'native-base';
 import { Card } from 'react-native-elements';
 import RNFetchBlob from 'react-native-fetch-blob';
 
 import MapPhoto from './MapPhoto';
+import FooterMenu from './FooterMenu';
 
 
 const deviceWidth = Dimensions.get('window').width;
 const deviceHeight = Dimensions.get('window').height;
 
 const styles = {
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
   itemStyle: {
     flexDirection: 'column',
     alignItems: 'center'
   },
   imageStyle: {
     width: deviceWidth,
-    height: deviceHeight * 0.6
+    height: deviceHeight * 0.55
   },
   detailStyle: {
     fontWeight: 'bold',
@@ -101,8 +111,11 @@ class DetailItem extends React.Component {
       haveMap = true;
     }
     return (
-      <View style={styles.itemStyle}>
+      <View style={styles.container}>
+      <Container>
       <ScrollView style={styles.fullWidth}>
+
+      <View style={styles.itemStyle}>
           <Image style={styles.imageStyle} source={{uri: params.item.image_url[1]}} />
 
 
@@ -122,8 +135,11 @@ class DetailItem extends React.Component {
             </View>
           }
         </Card>
-
+        </View>
         </ScrollView>
+
+        <FooterMenu navigation = {this.props.navigation}/>
+        </Container>
       </View>
 
     )

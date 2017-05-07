@@ -12,9 +12,9 @@ const FooterMenu = (props) => {
   return (
     <Footer>
       <FooterTab>
-        <Button vertical >
-          <Icon name="apps" />
-          <Text>Apps</Text>
+        <Button vertical onPress={() => navigate('Main') }>
+          <Icon name="home" />
+          <Text>Home</Text>
         </Button>
         <Button vertical onPress={() => navigate('CameraApp') }>
           <Icon name="camera" />
