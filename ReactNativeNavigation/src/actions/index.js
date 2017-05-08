@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import * as ActionTypes from './actionTypes';
+import { PX_KEY } from '../../secret';
 
 function fetchPhotoRequest() {
   return {
@@ -25,10 +26,9 @@ const fetchPhotoSuccess = (photos) => {
 
 export const fetchPhoto = (cb) => {
   const rdm = (Math.floor(Math.random()*500)+1);
-  const config = '&consumer_key=hQd0d4vI0T6IWipTwhovQ0fTRWyJzdJxGF4uE6QS';
   return dispatch => {
     dispatch(fetchPhotoRequest())
-    return axios.get(`https://api.500px.com/v1/photos?feature=popular&page=${rdm}&image_size[]=200&image_size[]=600${config}`)
+    return axios.get(`https://api.500px.com/v1/photos?feature=popular&page=${rdm}&image_size[]=200&image_size[]=600&${PX_KEY}`)
     .then(res => {
     cb(res.data.photos);
       return dispatch(fetchPhotoSuccess(res.data.photos));
