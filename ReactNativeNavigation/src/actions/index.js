@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import * as ActionTypes from './actionTypes';
-import { PX_KEY } from '../../secret';
+import Config from 'react-native-config';
 
 function fetchPhotoRequest() {
   return {
@@ -28,7 +28,7 @@ export const fetchPhoto = (cb) => {
   const rdm = (Math.floor(Math.random()*500)+1);
   return dispatch => {
     dispatch(fetchPhotoRequest())
-    return axios.get(`https://api.500px.com/v1/photos?feature=popular&page=${rdm}&image_size[]=200&image_size[]=600&${PX_KEY}`)
+    return axios.get(`https://api.500px.com/v1/photos?feature=popular&page=${rdm}&image_size[]=200&image_size[]=600&consumer_key=${Config.PX_KEY}`)
     .then(res => {
     cb(res.data.photos);
       return dispatch(fetchPhotoSuccess(res.data.photos));
