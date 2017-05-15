@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <TouchableOpacity
+    activeOpacity={0.2}
+    focusedOpacity={0.7}
+    onPress={[Function]}
+    style={
+        Object {
+            "backgroundColor": "white",
+            "borderColor": "teal",
+            "borderRadius": 10,
+            "borderWidth": 2,
+            "margin": 10,
+            "padding": 10,
+          }
+    }
+>
+    <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+    >
+        Display Data
+    </Text>
+</TouchableOpacity>,
+  "nodes": Array [
+    <TouchableOpacity
+      activeOpacity={0.2}
+      focusedOpacity={0.7}
+      onPress={[Function]}
+      style={
+            Object {
+                  "backgroundColor": "white",
+                  "borderColor": "teal",
+                  "borderRadius": 10,
+                  "borderWidth": 2,
+                  "margin": 10,
+                  "padding": 10,
+                }
+      }
+>
+      <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+      >
+            Display Data
+      </Text>
+</TouchableOpacity>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Button />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": Button {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {},
+        "refs": Object {},
+        "state": Object {
+          "data": Array [],
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <TouchableOpacity
+          activeOpacity={0.2}
+          focusedOpacity={0.7}
+          onPress={[Function]}
+          style={
+                    Object {
+                              "backgroundColor": "white",
+                              "borderColor": "teal",
+                              "borderRadius": 10,
+                              "borderWidth": 2,
+                              "margin": 10,
+                              "padding": 10,
+                            }
+          }
+>
+          <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+          >
+                    Display Data
+          </Text>
+</TouchableOpacity>,
+        "_debugID": 2,
+        "_renderedOutput": <TouchableOpacity
+          activeOpacity={0.2}
+          focusedOpacity={0.7}
+          onPress={[Function]}
+          style={
+                    Object {
+                              "backgroundColor": "white",
+                              "borderColor": "teal",
+                              "borderRadius": 10,
+                              "borderWidth": 2,
+                              "margin": 10,
+                              "padding": 10,
+                            }
+          }
+>
+          <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+          >
+                    Display Data
+          </Text>
+</TouchableOpacity>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Button />,
+}
+`;
