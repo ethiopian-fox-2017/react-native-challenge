@@ -1,0 +1,11 @@
+{
+  "bookings" :
+  [
+    {
+    "id" : 1,
+    "image_booking" : "https://s-media-cache-ak0.pinimg.com/originals/a5/6e/ec/a56eec5848b12775f9562ae5f41d9a77.jpg",
+    "restaurant" : "RM.Fast foody" ,
+    "person" : 2
+    }
+  ]
+}
