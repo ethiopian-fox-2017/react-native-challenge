@@ -1,0 +1,269 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <View
+    style={
+        Object {
+            "alignItems": "center",
+            "backgroundColor": "#2196F3",
+            "flexDirection": "row",
+            "height": "10%",
+            "justifyContent": "space-between",
+            "width": "100%",
+          }
+    }
+>
+    <Button
+        color="#fff"
+        onPress={[Function]}
+        style={
+            Object {
+                "color": "#fff",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "padding": 10,
+              }
+        }
+        title="Back"
+    />
+    <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+            Object {
+                "alignItems": "center",
+                "color": "#fff",
+                "fontSize": 22,
+              }
+        }
+    >
+        SpotifyApp
+    </Text>
+    <Button
+        color="#fff"
+        style={
+            Object {
+                "color": "#fff",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "padding": 10,
+              }
+        }
+        title="Next"
+    />
+</View>,
+  "nodes": Array [
+    <View
+      style={
+            Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#2196F3",
+                  "flexDirection": "row",
+                  "height": "10%",
+                  "justifyContent": "space-between",
+                  "width": "100%",
+                }
+      }
+>
+      <Button
+            color="#fff"
+            onPress={[Function]}
+            style={
+                  Object {
+                        "color": "#fff",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                        "padding": 10,
+                      }
+            }
+            title="Back"
+      />
+      <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+                  Object {
+                        "alignItems": "center",
+                        "color": "#fff",
+                        "fontSize": 22,
+                      }
+            }
+      >
+            SpotifyApp
+      </Text>
+      <Button
+            color="#fff"
+            style={
+                  Object {
+                        "color": "#fff",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                        "padding": 10,
+                      }
+            }
+            title="Next"
+      />
+</View>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <Header />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {},
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <View
+          style={
+                    Object {
+                              "alignItems": "center",
+                              "backgroundColor": "#2196F3",
+                              "flexDirection": "row",
+                              "height": "10%",
+                              "justifyContent": "space-between",
+                              "width": "100%",
+                            }
+          }
+>
+          <Button
+                    color="#fff"
+                    onPress={[Function]}
+                    style={
+                              Object {
+                                        "color": "#fff",
+                                        "fontSize": 15,
+                                        "fontWeight": "bold",
+                                        "padding": 10,
+                                      }
+                    }
+                    title="Back"
+          />
+          <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                              Object {
+                                        "alignItems": "center",
+                                        "color": "#fff",
+                                        "fontSize": 22,
+                                      }
+                    }
+          >
+                    SpotifyApp
+          </Text>
+          <Button
+                    color="#fff"
+                    style={
+                              Object {
+                                        "color": "#fff",
+                                        "fontSize": 15,
+                                        "fontWeight": "bold",
+                                        "padding": 10,
+                                      }
+                    }
+                    title="Next"
+          />
+</View>,
+        "_debugID": 2,
+        "_renderedOutput": <View
+          style={
+                    Object {
+                              "alignItems": "center",
+                              "backgroundColor": "#2196F3",
+                              "flexDirection": "row",
+                              "height": "10%",
+                              "justifyContent": "space-between",
+                              "width": "100%",
+                            }
+          }
+>
+          <Button
+                    color="#fff"
+                    onPress={[Function]}
+                    style={
+                              Object {
+                                        "color": "#fff",
+                                        "fontSize": 15,
+                                        "fontWeight": "bold",
+                                        "padding": 10,
+                                      }
+                    }
+                    title="Back"
+          />
+          <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                              Object {
+                                        "alignItems": "center",
+                                        "color": "#fff",
+                                        "fontSize": 22,
+                                      }
+                    }
+          >
+                    SpotifyApp
+          </Text>
+          <Button
+                    color="#fff"
+                    style={
+                              Object {
+                                        "color": "#fff",
+                                        "fontSize": 15,
+                                        "fontWeight": "bold",
+                                        "padding": 10,
+                                      }
+                    }
+                    title="Next"
+          />
+</View>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Header />,
+}
+`;
